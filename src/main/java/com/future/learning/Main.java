@@ -53,8 +53,14 @@ public class Main
 //		System.out.println(quiz.getPunktestand() + " / " + quiz.getFragen().size() + " richtig");
 
 		// Erzeugt das Quizfenster und macht es für den Benutzer sichtbar.
+
+//		Tests zur Hilfsklasse.
+//		System.out.println(Tests.parseInputDouble());
+//		System.out.println(Tests.parseInputInt());
+
 		QuizGui gui = new QuizGui();
 		gui.setVisible(true);
+
 	}
 
 	// Zeigt eine Frage in der Konsole an, liest die Eingabe und wertet sie aus.
