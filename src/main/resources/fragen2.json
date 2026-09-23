@@ -8,7 +8,7 @@
       "Eine textbasierte Sprache",
       "Eine Firma"
     ],
-    "richtigeAntwort": 3
+    "richtigeAntwort": [1,3]
   },
   {
     "frage": "Was sind Betriebssysteme?",

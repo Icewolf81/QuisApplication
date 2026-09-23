@@ -1,6 +1,5 @@
 package com.future.learning;
 
-import java.util.List;
 import java.util.Scanner;
 
 // Startklasse der Anwendung.
@@ -57,13 +56,13 @@ public class Main
 //		System.out.println(Tests.parseInputDouble());
 //		System.out.println(Tests.parseInputInt());
 
-//		QuizGui gui = new QuizGui();
-//		gui.setVisible(true);
-
-		final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
-		System.out.println(fragen.toString());
-		fragen.get(0).anzeigen();
-		fragen.get(1).anzeigen();
+		QuizGui gui = new QuizGui();
+		gui.setVisible(true);
+//
+//		final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
+//		System.out.println(fragen.toString());
+//		fragen.get(0).anzeigen();
+//		fragen.get(1).anzeigen();
 
 	}
 

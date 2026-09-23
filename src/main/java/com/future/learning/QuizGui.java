@@ -3,6 +3,7 @@ package com.future.learning;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // Grafische Oberfläche des Quiz. Die Klasse selbst ist ein JFrame-Fenster.
@@ -31,23 +32,28 @@ public class QuizGui extends JFrame
 	// Das Quiz-Objekt verwaltet den Punktestand.
 	private final Quiz quiz = new Quiz();
 
-	// Deklaration und Initialisierung von fragen mit
+	// Deklaration und Initialisierung von fragen
 	private final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
 
-	// Beispiel-Fragen, die momentan in der grafischen Oberfläche verwendet werden.
-	SingleChoiceFrage frage1 = new SingleChoiceFrage("Was ist HTML?",
-			List.of("Eine Abkürzung",
-					"Eine Person",
-					"Eine textbasierte Sprache",
-					"Eine Firma"),
-			3);
+	// Deklaration und Initialisierung des Indexes der Liste für die Fragen
+	int index = 0;
 
-	SingleChoiceFrage frage2 = new SingleChoiceFrage("Was sind Betriebssysteme?",
-			List.of("Putzkräfte",
-					"Feuerwehr",
-					"Ärzte",
-					"Software"),
-			4);
+	// Beispiel-Fragen, die momentan in der grafischen Oberfläche verwendet werden.
+//	SingleChoiceFrage frage1 = new SingleChoiceFrage("Was ist HTML?",
+//			List.of("Eine Abkürzung",
+//					"Eine Person",
+//					"Eine textbasierte Sprache",
+//					"Eine Firma"),
+//			3);
+//
+//	SingleChoiceFrage frage2 = new SingleChoiceFrage("Was sind Betriebssysteme?",
+//			List.of("Putzkräfte",
+//					"Feuerwehr",
+//					"Ärzte",
+//					"Software"),
+//			4);
+
+	// Fragen aus der JSON fragen.json einlesen
 
 	// Konstruktor: Erstellt das Fenster und fügt alle GUI-Elemente zusammen.
 	public QuizGui()
@@ -68,15 +74,20 @@ public class QuizGui extends JFrame
 		oberstesPanel.add(punkteLabel, BorderLayout.SOUTH);
 		hauptPanel.add(oberstesPanel, BorderLayout.NORTH);
 
-		// Pro Antwort der ersten Frage wird eine Zeile im Antwortbereich angelegt.
-		JPanel antwortPanel = new JPanel(new GridLayout(frage1.getAntworten().size(), 1));
+		// Mischt die Liste der Fragen zufällig
+		Collections.shuffle(fragen);
+
+		// Für jede Antwortmöglichkeit der aktuellen Frage wird eine Zeile im Antwortbereich angelegt.
+		SingleChoiceFrage aktuelleFrage = fragen.get(index);
+		JPanel antwortPanel = new JPanel(new GridLayout(aktuelleFrage.getAntworten().size(), 1));
 
 		// Übernimmt den Text der ersten Frage in das dafür vorgesehene Label.
-		frageLabel.setText(frage1.getFrage());
+		frageLabel.setText(aktuelleFrage.getFrage());
 
-		for (int i = 0; i < frage1.getAntworten().size(); i++)
+
+		for (int i = 0; i < aktuelleFrage.getAntworten().size(); i++)
 		{
-			JRadioButton button = new JRadioButton(frage1.getAntworten().get(i));
+			JRadioButton button = new JRadioButton(aktuelleFrage.getAntworten().get(i));
 
 			// Die Liste ermöglicht später den Zugriff auf die einzelnen Buttons.
 			antwortButtons.add(button);
@@ -104,11 +115,24 @@ public class QuizGui extends JFrame
 	// Ersetzt die bisher angezeigte Frage und die Antworttexte durch Frage 2.
 	private void zeigeNaechsteFrage()
 	{
-		frageLabel.setText(frage2.getFrage());
-
-		for (int i = 0; i < frage2.getAntworten().size(); i++)
+		if /*(index < fragen.size() - 1)*/ (index < 4) // Nur fünf Fragen für Bonus 1
 		{
-			antwortButtons.get(i).setText(frage2.getAntworten().get(i));
+			index++;
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(this, "Quiz beendet! Du hast " + Quiz.getPunktestand() + " Punkte erreicht.");
+			dispose(); // schließt das Fenster und gibt dessen Ressourcen frei
+			return; // wird noch benötigt damit die Methode sauber beendet wird.
+		}
+
+		SingleChoiceFrage aktuelleFrage = fragen.get(index);
+
+		frageLabel.setText(aktuelleFrage.getFrage());
+
+		for (int i = 0; i < aktuelleFrage.getAntworten().size(); i++)
+		{
+			antwortButtons.get(i).setText(aktuelleFrage.getAntworten().get(i));
 		}
 	}
 
@@ -143,7 +167,7 @@ public class QuizGui extends JFrame
 		}
 
 		// Nur bei einer richtigen Antwort wird der Punktestand erhöht.
-		if (frage1.isRichtig(auswahl))
+		if (fragen.get(index).isRichtig(auswahl))
 		{
 			quiz.addPunkte();
 		}
