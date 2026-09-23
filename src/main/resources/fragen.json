@@ -1,0 +1,24 @@
+[
+  {
+    "frage": "Was ist HTML?",
+    "antworten":
+    [
+      "Eine Abkürzung",
+      "Eine Person",
+      "Eine textbasierte Sprache",
+      "Eine Firma"
+    ],
+    "richtigeAntwort": 3
+  },
+  {
+    "frage": "Was sind Betriebssysteme?",
+    "antworten":
+    [
+      "Putzkräfte",
+      "Feuerwehr",
+      "Ärzte",
+      "Software"
+    ],
+    "richtigeAntwort": 4
+  }
+]

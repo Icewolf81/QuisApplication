@@ -31,6 +31,9 @@ public class QuizGui extends JFrame
 	// Das Quiz-Objekt verwaltet den Punktestand.
 	private final Quiz quiz = new Quiz();
 
+	// Deklaration und Initialisierung von fragen mit
+	private final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
+
 	// Beispiel-Fragen, die momentan in der grafischen Oberfläche verwendet werden.
 	SingleChoiceFrage frage1 = new SingleChoiceFrage("Was ist HTML?",
 			List.of("Eine Abkürzung",
