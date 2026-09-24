@@ -1,101 +1,245 @@
-[
-  {
-    "frage": "Was ist HTML?",
-    "antworten":
-    [
-      "Eine Abkürzung",
-      "Eine Person",
-      "Eine textbasierte Sprache",
-      "Eine Firma"
-    ],
-    "richtigeAntwort": [1,3]
-  },
-  {
-    "frage": "Was sind Betriebssysteme?",
-    "antworten":
-    [
-      "Putzkräfte",
-      "Feuerwehr",
-      "Ärzte",
-      "Software"
-    ],
-    "richtigeAntwort": 4
-  },
-  {
-    "frage": "Welche Aufgabe hat ein Compiler?",
-    "antworten":
-    [
-      "Er übersetzt Quellcode",
-      "Er speichert Dateien",
-      "Er verwaltet Benutzerkonten",
-      "Er verbindet Computer mit dem Internet"
-    ],
-    "richtigeAntwort": 1
-  },
-  {
-    "frage": "Welche der folgenden Sprachen läuft typischerweise auf der JVM?",
-    "antworten":
-    [
-      "HTML",
-      "Java",
-      "SQL",
-      "CSS"
-    ],
-    "richtigeAntwort": 2
-  },
-  {
-    "frage": "Was bedeutet die Deklaration einer Variable?",
-    "antworten":
-    [
-      "Die Variable wird gelöscht",
-      "Der Variable wird immer ein Wert zugewiesen",
-      "Name und Datentyp der Variable werden festgelegt",
-      "Die Variable wird ausgegeben"
-    ],
-    "richtigeAntwort": 3
-  },
-  {
-    "frage": "Was bewirkt static in Java?",
-    "antworten":
-    [
-      "Das Element gehört zur Klasse",
-      "Das Element kann nicht verändert werden",
-      "Das Element ist immer privat",
-      "Das Element wird automatisch gelöscht"
-    ],
-    "richtigeAntwort": 1
-  },
-  {
-    "frage": "Wofür wird Gson verwendet?",
-    "antworten":
-    [
-      "Zum Erstellen von Datenbanken",
-      "Zum Umwandeln zwischen Java-Objekten und JSON",
-      "Zum Kompilieren von Java-Code",
-      "Zum Erstellen von Benutzeroberflächen"
-    ],
-    "richtigeAntwort": 2
-  },
-  {
-    "frage": "Welcher Datentyp wird in Java für ganze Zahlen verwendet?",
-    "antworten":
-    [
-      "double",
-      "boolean",
-      "int",
-      "String"
-    ],
-    "richtigeAntwort": 3
-  },
-  {
-    "frage": "Welche Sammlung speichert keine doppelten Werte?",
-    "antworten":
-    [
-      "List",
-      "Set",
-      "Array",
-      "String"
-    ],
-    "richtigeAntwort": 2
-  }
-]
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which Beatle wrote and sang the song &quot;Why Don&#039;t We Do It in the Road&quot; after being inspired by seeing two monkeys copulating in the street?",
+      "correct_answer": "Paul",
+      "incorrect_answers": [
+        "John",
+        "George",
+        "Ringo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "What is widely considered to be the oldest civilization known to mankind?",
+      "correct_answer": "Sumeria",
+      "incorrect_answers": [
+        "Babylon",
+        "Assyria",
+        "Phoenicia"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "Which German field marshal was known as the `Desert Fox`?",
+      "correct_answer": "Erwin Rommel",
+      "incorrect_answers": [
+        "Ernst Busch",
+        "Wolfram Freiherr von Richthofen",
+        "Wilhelm List"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "The &quot;British Invasion&quot; was a cultural phenomenon in music where British boy bands became popular in the USA in what decade?",
+      "correct_answer": "60&#039;s",
+      "incorrect_answers": [
+        "50&#039;s",
+        "40&#039;s",
+        "30&#039;s"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "Pol Pot was the former dictator of which country?",
+      "correct_answer": "Cambodia",
+      "incorrect_answers": [
+        "Laos",
+        "North Korea",
+        "Vietnam"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Which of the following games was NOT included in Valve&#039;s &quot;The Orange Box&quot;?",
+      "correct_answer": "Left 4 Dead",
+      "incorrect_answers": [
+        "Half-Life 2: Episode Two",
+        "Portal",
+        "Team Fortress 2"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Mythology",
+      "question": "What was the punishment for Sysiphus&#039;s craftiness?",
+      "correct_answer": "Cursed to roll a boulder up a hill for eternity.",
+      "incorrect_answers": [
+        "Tied to a boulder for eternity, being pecked by birds.",
+        "Standing in a lake filled with water he could not drink.",
+        "To fell a tree that regenerated after every axe swing."
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which of the following is not in the Indo-European language family?",
+      "correct_answer": "Finnish",
+      "incorrect_answers": [
+        "English",
+        "Hindi",
+        "Russian"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "What does CPU stand for?",
+      "correct_answer": "Central Processing Unit",
+      "incorrect_answers": [
+        "Central Process Unit",
+        "Computer Personal Unit",
+        "Central Processor Unit"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "How many permanent companions are there in the base game version of Fallout: New Vegas?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "6"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which one of these paintings is not by Caspar David Friedrich?",
+      "correct_answer": "The Black Sea",
+      "incorrect_answers": [
+        "The Sea of Ice",
+        "Wanderer above the Sea of Fog",
+        "The Monk by the Sea"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "In the anime &quot;My Hero Academia&quot;, which character is shown with the ability to manipulate gravity?",
+      "correct_answer": "Uraraka",
+      "incorrect_answers": [
+        "Bakugo",
+        "Deku",
+        "Asui "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "General Knowledge",
+      "question": "In aerodynamics, which force pushes an object upwards?",
+      "correct_answer": "Lift",
+      "incorrect_answers": [
+        "Drag",
+        "Weight",
+        "Thrust"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Animals",
+      "question": "What is the average amount of chinchillas born into a single litter?",
+      "correct_answer": "2-3",
+      "incorrect_answers": [
+        "10-15",
+        "5-8",
+        "15-18"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Mythology",
+      "question": "Who did Hippomenes defeat in a footrace?",
+      "correct_answer": "Atalanta",
+      "incorrect_answers": [
+        "Peleus",
+        "Theseus",
+        "Jason"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "General Knowledge",
+      "question": "What year was Queen Elizabeth II born?",
+      "correct_answer": "1926",
+      "incorrect_answers": [
+        "1923",
+        "1929",
+        "1930"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Politics",
+      "question": "Which former US president was nicknamed &quot;Teddy&quot; after he refused to shoot a defenseless black bear?",
+      "correct_answer": "Theodore Roosevelt",
+      "incorrect_answers": [
+        "Woodrow Wilson",
+        "James F. Fielder",
+        "Andrew Jackson"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science &amp; Nature",
+      "question": "Approximately how long is a year on Uranus?",
+      "correct_answer": "84 Earth years",
+      "incorrect_answers": [
+        "47 Earth years",
+        "62 Earth years",
+        "109 Earth years"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Geography",
+      "question": "The US state of New York has about as many inhabitants as?",
+      "correct_answer": "Romania",
+      "incorrect_answers": [
+        "Poland",
+        "Germany",
+        "Hungary"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Musicals &amp; Theatres",
+      "question": "&quot;Doctor Who&quot; star David Tennant performed in a rendition of which Shakespearean play?",
+      "correct_answer": "Hamlet",
+      "incorrect_answers": [
+        "The Tempest",
+        "Othello",
+        "The Taming of the Shrew"
+      ]
+    }
+  ]
+}

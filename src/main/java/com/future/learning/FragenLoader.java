@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FragenLoader
@@ -31,11 +32,22 @@ public class FragenLoader
 
 			for (FragenDaten frage : daten)
 			{
+				// Text der richtigen Antwort merken
+				String richtigeAntwortText =
+						frage.antworten.get(frage.richtigeAntwort - 1);
+
+				// Antworten mischen
+				Collections.shuffle(frage.antworten);
+
+				// Neue Position der richtigen Antwort bestimmen
+				int richtigeAntwort =
+						frage.antworten.indexOf(richtigeAntwortText) + 1;
+
 				fragen.add(new SingleChoiceFrage(
 						frage.frage,
 						frage.antworten,
-						frage.richtigeAntwort)
-				);
+						richtigeAntwort
+				));
 			}
 			return fragen;
 		}

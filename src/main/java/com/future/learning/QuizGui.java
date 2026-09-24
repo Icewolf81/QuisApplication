@@ -33,7 +33,7 @@ public class QuizGui extends JFrame
 	private final Quiz quiz = new Quiz();
 
 	// Deklaration und Initialisierung von fragen
-	private final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
+	private final List<SingleChoiceFrage> fragen;
 
 	// Deklaration und Initialisierung des Indexes der Liste für die Fragen
 	int index = 0;
@@ -56,8 +56,9 @@ public class QuizGui extends JFrame
 	// Fragen aus der JSON fragen.json einlesen
 
 	// Konstruktor: Erstellt das Fenster und fügt alle GUI-Elemente zusammen.
-	public QuizGui()
+	public QuizGui(List<SingleChoiceFrage> fragen)
 	{
+		this.fragen = fragen;
 		// Grundeinstellungen des Fensters.
 		setTitle("Future Quiz");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

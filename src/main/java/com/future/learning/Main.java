@@ -56,13 +56,38 @@ public class Main
 //		System.out.println(Tests.parseInputDouble());
 //		System.out.println(Tests.parseInputInt());
 
-		QuizGui gui = new QuizGui();
+		StartGui gui = new StartGui();
 		gui.setVisible(true);
 //
-//		final List<SingleChoiceFrage> fragen = FragenLoader.ladeFragen();
+//		final List<SingleChoiceFrage> fragen = TriviaFragenLoader.ladeFragen();
 //		System.out.println(fragen.toString());
 //		fragen.get(0).anzeigen();
 //		fragen.get(1).anzeigen();
+
+		// Versucht zunächst einen request zu machen und den body in der Konsole auszugeben!
+//		final String API_URL =
+//				"https://opentdb.com/api.php?amount=10&type=multiple";
+//
+//		HttpClient client = HttpClient.newHttpClient();
+//
+//		HttpRequest request = HttpRequest.newBuilder()
+//				.uri(URI.create(API_URL))
+//				.GET()
+//				.build();
+//
+//		try
+//		{
+//			HttpResponse<String> response = client.send(
+//					request,
+//					HttpResponse.BodyHandlers.ofString()
+//			);
+//
+//			System.out.println(response.body());
+//		}
+//		catch (IOException | InterruptedException e)
+//		{
+//			e.printStackTrace();
+//		}
 
 	}
 
