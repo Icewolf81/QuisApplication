@@ -97,5 +97,95 @@
       "String"
     ],
     "richtigeAntwort": 2
+  },
+  {
+    "frage": "Was ist Java",
+    "antworten": [
+      "Eine Insel",
+      "Eine Programmiersprache",
+      "Ein Festival",
+      "Existiert nicht"
+    ],
+    "richtigeAntwort": 1
+  },
+  {
+    "frage": "Was ist HTML",
+    "antworten": [
+      "Eine Auszeichnungssprache zum Strukturieren von Webseiten.",
+      "Eine Kaffeesorte für Programmierer.",
+      "Ein sehr höflicher Hamster im Internet.",
+      "Die Abkürzung für „Hilfe, Tastatur macht Lärm!“"
+    ],
+    "richtigeAntwort": 1
+  },
+  {
+    "frage": "Was sind Betriebssysteme",
+    "antworten": [
+      "Ein System, das nur während der Betriebsfeier funktioniert.",
+      "Die geheime Kommandozentrale der Tastatur.",
+      "Eine grundlegende Software, die Hardware und Software verbindet und Ressourcen nutzbar macht.",
+      "Ein Büro, in dem Computer Urlaub beantragen."
+    ],
+    "richtigeAntwort": 3
+  },
+  {
+    "frage": "Welche Methode ist der Einstiegspunkt eines Java-Programms",
+    "antworten": [
+      "start()",
+      "run()",
+      "open()",
+      "main()"
+    ],
+    "richtigeAntwort": 4
+  },
+  {
+    "frage": "Welches Schlüsselwort wird in Java verwendet, um ein neues Objekt zu erzeugen",
+    "antworten": [
+      "create",
+      "object",
+      "new",
+      "class"
+    ],
+    "richtigeAntwort": 3
+  },
+  {
+    "frage": "Wofür steht CSS?",
+    "antworten": [
+      "Computer Style System",
+      "Cascading Style Sheets",
+      "Creative Software Syntax",
+      "Central Styling Service"
+    ],
+    "richtigeAntwort": 2
+  },
+  {
+    "frage": "Welche Dateiendung hat typischerweise eine Java-Datei?",
+    "antworten": [
+      ".js",
+      ".json",
+      ".java",
+      ".jpg"
+    ],
+    "richtigeAntwort": 3
+  },
+  {
+    "frage": "Was bedeutet private in Java?",
+    "antworten": [
+      "Es ist absolut sicher und kann von außen nicht gelesen werden.",
+      "Nur ein definierter User darf darauf zugreifen.",
+      "Man kann nur mit einer Methode darauf zugreifen.",
+      "Nur die eigene Klasse darf direkt darauf zugreifen."
+    ],
+    "richtigeAntwort": 4
+  },
+  {
+    "frage": "Welcher Datentyp speichert true oder false?",
+    "antworten": [
+      "bull",
+      "bowl",
+      "boul",
+      "bool"
+    ],
+    "richtigeAntwort": 4
   }
 ]

@@ -27,7 +27,7 @@ public class QuizGui extends JFrame
 	private final JMenuBar menuBar = new JMenuBar();
 	private final JMenu menuFile = new JMenu("File");
 	private final JMenuItem menuItemExit = new JMenuItem("Exit");
-	private final JLabel frageLabel = new JLabel("STANDARFRAGE?", SwingConstants.CENTER);
+	private final JLabel frageLabel = new JLabel("STANDADRFRAGE?", SwingConstants.CENTER);
 
 	// Das Quiz-Objekt verwaltet den Punktestand.
 	private final Quiz quiz = new Quiz();
