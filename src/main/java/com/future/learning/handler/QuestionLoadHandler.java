@@ -1,6 +1,5 @@
 package com.future.learning.handler;
 
-import com.future.learning.QuizFrage;
 import com.future.learning.SingleChoiceFrage;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +29,7 @@ public abstract class QuestionLoadHandler implements CoRHandler
         return nextHandler.handle(anzahl);
     }
 
-    protected List<QuizFrage> parseFragen(String json)
+    protected List<SingleChoiceFrage> parseFragen(String json)
     {
         Gson gson = new Gson();
 
@@ -45,7 +44,7 @@ public abstract class QuestionLoadHandler implements CoRHandler
             );
         }
 
-        List<QuizFrage> fragen = new ArrayList<>();
+        List<SingleChoiceFrage> fragen = new ArrayList<>();
 
         for (TriviaFragenDaten frage : triviaAntwort.results)
         {

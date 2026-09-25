@@ -7,7 +7,7 @@ import java.util.List;
 public class ErrorQuestionHandler extends QuestionLoadHandler
 {
     @Override
-    public List<SingleChoiceFrage> handle(int anzahl)
+    public List<SingleChoiceFrage> handle(int anzahl) throws QuestionLoadException
     {
         throw new QuestionLoadException(
                 "Fragen konnten weder über die API noch aus dem Cache geladen werden."

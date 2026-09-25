@@ -1,9 +1,6 @@
 package com.future.learning;
 
-import com.future.learning.handler.ApiQuestionHandler;
-import com.future.learning.handler.ErrorQuestionHandler;
 import com.future.learning.handler.QuestionLoadException;
-import com.future.learning.handler.SavedQuestionHandler;
 
 import java.util.Scanner;
 
@@ -63,17 +60,17 @@ public class Main
 
 
 
-		ApiQuestionHandler apiHandler = new ApiQuestionHandler();
-		SavedQuestionHandler savedHandler = new SavedQuestionHandler();
-		ErrorQuestionHandler errorHandler = new ErrorQuestionHandler();
+//		ApiQuestionHandler apiHandler = new ApiQuestionHandler();
+//		SavedQuestionHandler savedHandler = new SavedQuestionHandler();
+//		ErrorQuestionHandler errorHandler = new ErrorQuestionHandler();
+//
+//		apiHandler.linkWith(savedHandler);
+//		savedHandler.linkWith(errorHandler);
+//
+//		apiHandler.handle(5);
 
-		apiHandler.linkWith(savedHandler);
-		savedHandler.linkWith(errorHandler);
-
-		apiHandler.handle(5);
-
-//		StartGui gui = new StartGui();
-//		gui.setVisible(true);
+		StartGui gui = new StartGui();
+		gui.setVisible(true);
 //
 //		final List<SingleChoiceFrage> fragen = TriviaFragenLoader.ladeFragen();
 //		System.out.println(fragen.toString());

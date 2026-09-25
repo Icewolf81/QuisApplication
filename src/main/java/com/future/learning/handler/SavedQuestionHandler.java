@@ -13,7 +13,7 @@ public class SavedQuestionHandler extends QuestionLoadHandler
             Path.of("src", "main", "resources", "fragen2.json");
 
     @Override
-    public List<SingleChoiceFrage> handle(int anzahl)
+    public List<SingleChoiceFrage> handle(int anzahl) throws QuestionLoadException
     {
         try
         {

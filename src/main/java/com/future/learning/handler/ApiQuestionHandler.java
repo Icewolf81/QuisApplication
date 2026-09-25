@@ -21,7 +21,7 @@ public class ApiQuestionHandler extends QuestionLoadHandler
             Path.of("src", "main", "resources", "fragen2.json");
 
     @Override
-    public List<SingleChoiceFrage> handle(int anzahl)
+    public List<SingleChoiceFrage> handle(int anzahl) throws QuestionLoadException
     {
         try
         {
@@ -43,6 +43,9 @@ public class ApiQuestionHandler extends QuestionLoadHandler
             }
 
             // Erfolgreiche API-Antwort als Cache speichern.
+            List<SingleChoiceFrage> fragen =
+                    parseFragen(response.body());
+
             Files.writeString(
                     ZIELDATEI,
                     response.body(),
@@ -51,7 +54,7 @@ public class ApiQuestionHandler extends QuestionLoadHandler
                     StandardOpenOption.TRUNCATE_EXISTING
             );
 
-            return parseFragen(response.body());
+            return fragen;
         }
         catch (Exception e)
         {
