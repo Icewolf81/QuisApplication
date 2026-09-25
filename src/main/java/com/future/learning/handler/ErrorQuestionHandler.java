@@ -10,6 +10,17 @@ public class ErrorQuestionHandler extends QuestionLoadHandler
     @Override
     public List<QuizFrage> handle(int anzahl) throws QuestionLoadException
     {
+        try
+        {
+            System.out.println("Ich habe das Error-Handling versucht!");
+            if (true == false)
+            {
+                return List.of();
+            }
+        } catch (IllegalStateException e)
+        {
+            return List.of();
+        }
         return handleNext(anzahl);
     }
 }
