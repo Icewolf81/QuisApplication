@@ -4,7 +4,7 @@ import com.future.learning.QuizFrage;
 
 import java.util.List;
 
-public abstract class QuestionLoadHandler
+public abstract class QuestionLoadHandler implements CoRHandler
 {
     private QuestionLoadHandler nextHandler;
 

@@ -1,12 +1,17 @@
 package com.future.learning;
 
+import com.future.learning.handler.ApiQuestionHandler;
+import com.future.learning.handler.ErrorQuestionHandler;
+import com.future.learning.handler.QuestionLoadException;
+import com.future.learning.handler.SavedQuestionHandler;
+
 import java.util.Scanner;
 
 // Startklasse der Anwendung.
 public class Main
 {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) throws QuestionLoadException
+    {
 		/*
 		 * Frühere Konsolenversion des Quiz.
 		 * Sie bleibt auskommentiert erhalten, damit die Entwicklung von der
@@ -56,8 +61,19 @@ public class Main
 //		System.out.println(Tests.parseInputDouble());
 //		System.out.println(Tests.parseInputInt());
 
-		StartGui gui = new StartGui();
-		gui.setVisible(true);
+
+
+		ApiQuestionHandler apiHandler = new ApiQuestionHandler();
+		SavedQuestionHandler savedHandler = new SavedQuestionHandler();
+		ErrorQuestionHandler errorHandler = new ErrorQuestionHandler();
+
+		apiHandler.linkWith(savedHandler);
+		savedHandler.linkWith(errorHandler);
+
+		apiHandler.handle(5);
+
+//		StartGui gui = new StartGui();
+//		gui.setVisible(true);
 //
 //		final List<SingleChoiceFrage> fragen = TriviaFragenLoader.ladeFragen();
 //		System.out.println(fragen.toString());
