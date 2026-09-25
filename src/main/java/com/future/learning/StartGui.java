@@ -1,5 +1,10 @@
 package com.future.learning;
 
+import com.future.learning.handler.ApiQuestionHandler;
+import com.future.learning.handler.ErrorQuestionHandler;
+import com.future.learning.handler.QuestionLoadException;
+import com.future.learning.handler.SavedQuestionHandler;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
@@ -34,14 +39,29 @@ public class StartGui extends JFrame
 
 		triviaFragenButton.addActionListener(e ->
 		{
-			TriviaDownloader.ladeFragenHerunter();
+			ApiQuestionHandler apiHandler = new ApiQuestionHandler();
+			SavedQuestionHandler savedHandler = new SavedQuestionHandler();
+			ErrorQuestionHandler errorHandler = new ErrorQuestionHandler();
 
-			List<SingleChoiceFrage> fragen = TriviaFragenLoader.ladeFragen();
+			apiHandler.linkWith(savedHandler);
+			savedHandler.linkWith(errorHandler);
 
-			QuizGui quizGui = new QuizGui(fragen);
-			quizGui.setVisible(true);
+			try
+			{
+				List<SingleChoiceFrage> fragen = apiHandler.handle(5);
 
-			dispose();
+				QuizGui quizGui = new QuizGui(fragen);
+				quizGui.setVisible(true);
+
+				dispose();
+			}
+			catch (QuestionLoadException ex)
+			{
+				JOptionPane.showMessageDialog(
+						this,
+						ex.getMessage()
+				);
+			}
 		});
 
 		pack();

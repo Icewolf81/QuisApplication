@@ -1,26 +1,32 @@
 package com.future.learning.handler;
 
-import com.future.learning.QuizFrage;
+import com.future.learning.SingleChoiceFrage;
 
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 public class SavedQuestionHandler extends QuestionLoadHandler
 {
-    // TODO: Füge die Cached-Anfrage ein!
+    private static final Path DATEI =
+            Path.of("src", "main", "resources", "fragen2.json");
+
     @Override
-    public List<QuizFrage> handle(int anzahl) throws QuestionLoadException
+    public List<SingleChoiceFrage> handle(int anzahl)
     {
         try
         {
-            System.out.println("Ich habe den Cache versucht!");
-            if (true == false)
-            {
-                return List.of();
-            }
-        } catch (IllegalStateException e)
-        {
-            return List.of();
+            String json = Files.readString(
+                    DATEI,
+                    StandardCharsets.UTF_8
+            );
+
+            return parseFragen(json);
         }
-        return handleNext(anzahl);
+        catch (Exception e)
+        {
+            return handleNext(anzahl);
+        }
     }
 }
